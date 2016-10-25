@@ -1,0 +1,20 @@
+<div role="dialog" tabindex="-1" aria-labelledby="dialog-title">
+    <div role="document" class="modal-dialog animated bounceIn">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 id="dialog-title">this is a dialog from {{parent}}<!-- MainController will be show--></h1>
+          </div>
+
+          <div class="modal-body">
+            Modal Body {{vm.a}}
+          </div>
+
+          <div class="modal-footer">
+            <button ng-click="close()">Close Dialog with parameter(see log)</button><br><br>
+            <strong>Without parameters can resolve and close directly</strong>
+            <button ng-click="resolve()">Close Dialog without parameters</button>
+          </div>
+        </div>
+    </div>
+</div>

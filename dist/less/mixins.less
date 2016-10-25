@@ -1,0 +1,14 @@
+.animate-all () {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.calc(@expression, @fallback) {
+    width: @fallback;
+    width: -moz-calc(@expression); 
+    width: -o-calc(@expression); 
+    width: -webkit-calc(@expression); 
+    width: calc(@expression);
+}

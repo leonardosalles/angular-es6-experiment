@@ -1,0 +1,27 @@
+ <div class="acnf-page-wrapper">
+    <snap-drawer>
+        <div class="sidebar-nav">
+            <div class="item" ng-repeat="item in sidebar.items" ng-class="{'header' : item.header}">
+                <span ng-if="item.header">{{item.header}}</span>
+
+                <div class="item-wrapper">
+                    <a ng-if="item.href" ng-attr-href="{{item.href ? sidebar.parent + item.href : undefined}}" ng-if="!item.header" snap-close tooltip-placement="right" uib-tooltip="{{item.text}}" tooltip-class="tooltip-sidebar">
+                        <span class="icon-wrapper">
+                            <i class="fa animated bounceIn" ng-class="getIconClass(item.icon)"></i>
+                        </span>
+
+                        {{item.text}}
+                    </a>
+
+                    <a ng-if="item.back" ng-if="!item.header" snap-close tooltip-placement="right" uib-tooltip="{{item.text}}" tooltip-class="tooltip-sidebar" ng-click="historyBack()">
+                        <span class="icon-wrapper">
+                            <i class="fa animated bounceIn" ng-class="getIconClass(item.icon)"></i>
+                        </span>
+
+                        {{item.text}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </snap-drawer>
+</div>

@@ -1,0 +1,34 @@
+// CSS Files must be inline to enable override without !important
+@import (inline) '../node_modules/angular-snap/angular-snap.css';
+
+// Common less files
+@import 'variables.less';
+@import 'mixins';
+@import 'animate';
+@import 'card';
+@import 'dialog';
+@import 'form';
+@import 'buttons';
+@import 'sidebar';
+
+// Framework components
+@import '../components/loading/loading';
+@import '../components/header/header';
+@import '../components/sidebar/sidebar';
+
+// Core less libs
+@import '../node_modules/bootstrap/less/bootstrap';
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: @white;
+    background-color: @primaryColor;    
+}
+
+snap-content {
+    background-color: rgb(250, 252, 254);
+}
+
+.acnf-navigation-error {
+    padding: 0 20px;
+}

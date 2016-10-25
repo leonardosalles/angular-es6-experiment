@@ -1,0 +1,45 @@
+<nav class="acnf-header navbar navbar-acnf navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div href="#" class="navbar-brand">
+                <span ng-if="header.title">{{header.title}}</span>
+
+                <img ng-if="header.logo" ng-src="{{header.logo}}" alt="Logo">
+
+                <button class="btn btn-toggle" ng-if="sidebar && sidebar.items.length" snap-toggle>
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <ul class="nav navbar-nav" ng-if="header.menuItems"> 
+            <li ng-repeat="item in header.menuItems" ng-class="getActiveClass(item.id)">
+                <a ng-href="{{item.href}}">
+                    <i class="fa" ng-class="getIconClass(item.icon)"></i>
+                    {{item.text}}
+                </a>
+            </li>
+        </ul>
+
+        <div class="nav navbar-nav" ng-if="header.version">
+            <h4 class="version">Versão {{header.version}}</h4>
+        </div>
+
+        <div class="nav navbar-right">
+            <div class="btn-group user-actions" uib-dropdown is-open="status.isopen" ng-if="header.logged">
+              <button id="single-button" type="button" class="btn btn-user" uib-dropdown-toggle ng-disabled="disabled">
+                {{header.logged.name}} <i class="fa fa-angle-down btn-icon-mini"></i>
+              </button>
+              <ul class="dropdown-menu animated bounceIn" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"><a href="#">Minha Conta</a></li>
+                <li role="menuitem"><a href="#">Meu Plano</a></li>
+                <li role="menuitem"><a href="#">Alterar Senha</a></li>
+                <li class="divider"></li>
+                <li role="menuitem">
+                    <button class="btn btn-block btn-danger">Sair</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</nav>

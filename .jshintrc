@@ -1,0 +1,14 @@
+{
+    "esversion": 6,
+    "globals": {
+        "module": false,
+        "require": false,
+        "console": false,
+        "process": false,
+        "angular": false,
+        "window": false,
+		"document": false,
+        "setTimeout": false,
+        "AcnfComponent": false
+    }
+}

@@ -1,0 +1,42 @@
+body {
+    overflow: hidden;
+}
+
+snap-drawer {
+    margin-top: 50px;
+    background-color: #fff;
+}
+
+snap-content {
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    box-shadow: none !important;
+    border-left: 1px solid #cccccc;
+}
+
+.sidebar-nav {
+    .item {
+        &.header {
+            display: none;
+            font-weight: bold;
+        }
+
+        a {
+            color: @secondaryColor;
+            height: 50px;
+            display: block;
+
+            &:hover {
+                color: @white;
+                background-color: @tertiaryColor;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .icon-wrapper {
+        width: 57px;
+        display: inline-block;
+        text-align: center;
+    }
+}

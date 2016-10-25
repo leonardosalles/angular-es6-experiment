@@ -1,0 +1,21 @@
+{
+    "controllers": [
+        "navigation"
+    ],
+
+    "services": [
+        "dialog",
+        "sidebar",
+        "header",
+        "security",
+        "navigation"
+    ],
+
+    "components": [
+        "sidebar",
+        "header",
+        "datascroller",
+        "form",
+        "loading"
+    ]
+}

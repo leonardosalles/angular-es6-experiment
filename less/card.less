@@ -1,0 +1,115 @@
+.col-sm-card {
+	width: 20%;
+	
+	.card-image {
+		min-height: 151px !important;
+	}
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+	
+  .list-group-item {
+	  border-right: 0;
+      border-left: 0;
+
+	  &:first-child {
+	    border-radius: 0;
+	  }
+  }
+}
+
+.card-title-block {
+	background-color: @primaryColor;
+	color: #fff;
+	font-size: 17px;
+	padding: 9px;
+    border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.card span.card-title {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 300;
+	text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 192px;
+  background-image: url(../img/loader.gif);
+  background-size: contain;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  width: 100%;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  color: #000;
+}
+.card-link:hover,
+.card-link:focus,
+.card-link:active {
+	text-decoration: none;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+  text-transform: lowercase;
+	
+  &.description {
+    padding: 15px;
+  }
+	
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+  display: block;
+  text-transform: uppercase;
+  color: @tertiaryColor;
+}
+
+.card .card-action:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.card .card-action a {
+  color: @primaryColor;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
